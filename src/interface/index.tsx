@@ -66,6 +66,5 @@ export interface IFavoritesState {
   currentGameType: string,
   page: number,
   pageSize: number,
-  total:number,
-  loading: boolean
+  total:number
 }

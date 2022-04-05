@@ -35,8 +35,7 @@ class favorites extends Component {
     currentGameType: '全部',
     page: 1,
     pageSize: 10,
-    total:0,
-    loading: true
+    total:0
   }
   shouldComponentUpdate(nextProps: object, nextState: IFavoritesState): boolean {
     let isTypeChange = this.state.currentGameType !== nextState.currentGameType
@@ -77,8 +76,7 @@ class favorites extends Component {
       game, // 总数据
       searchRes: game, // 处理后的总数据
       showGame: game.slice(0, 10), // 展示数据
-      total: game.length,
-      loading: false
+      total: game.length
     })
   }
   // 获取游戏类型
@@ -154,7 +152,7 @@ class favorites extends Component {
     this.getGameList()
   }
   render() {
-    const { total, showGame, sortType, gameType, page, pageSize ,loading} = this.state
+    const { total, showGame, sortType, gameType, page, pageSize } = this.state
     return (
       <>
         <header className={styles.header}>
@@ -195,7 +193,6 @@ class favorites extends Component {
             </div>
         </header>
         <section className={styles.section}>
-          <Spin size="large" spinning={loading} tip="拼命加载中...">
             <List
                 grid={{ gutter: 16, column: 4 }}
                 dataSource={showGame}
@@ -224,7 +221,6 @@ class favorites extends Component {
                   </List.Item>
                 )}
             />
-          </Spin>
         </section>
         <footer className={styles.footer}>
           <Pagination

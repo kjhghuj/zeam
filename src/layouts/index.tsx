@@ -32,7 +32,7 @@ const BasicLayout: React.FC = props => {
         <div className={styles.left} onClick={toHome}>
             zeam
           </div>
-          <div className={styles.right} onClick={()=>setShowMenu(!showMenu)}>
+          <div className={styles.right} onClick={()=>setShowMenu(!showMenu)} onBlur={()=>{console.log(111)}}>
           <User showMenu={showMenu} list={ List }/>
           </div>
       </div>

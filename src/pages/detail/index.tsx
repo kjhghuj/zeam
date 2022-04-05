@@ -79,7 +79,11 @@ class detail extends Component {
     const { location } = history;
     const query: any = location.query
     let list: any = localStorage.getItem('favoritesList')
-    const inFavoritesList:boolean = JSON.parse(list).includes(+query.id)
+    let inFavoritesList:boolean = false
+    if (list){
+      inFavoritesList = JSON.parse(list).includes(+query.id)
+    }
+    
     let res = await getdetail(query)
     this.setState({
       Game:res.data,

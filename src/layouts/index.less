@@ -1,0 +1,27 @@
+.header{
+  background: #2a2a2a;
+  height: 8rem;
+  padding: 1rem 1.5rem;
+  .left {
+    font-family: fantasy;
+    font-size: 4.5rem;
+    line-height: 5rem;
+    color: #fff;
+    float: left;
+    cursor: pointer;
+  }
+  .right {
+    float: right;
+    width: 6rem;
+    height: 100%;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.children {
+  padding: 2rem;
+  height: calc(100% - 8rem);
+}

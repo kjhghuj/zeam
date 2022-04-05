@@ -5,12 +5,12 @@
 Install dependencies,
 
 ```bash
-$ yarn
+$ npm install
 ```
 
 Start the dev server,
 
 ```bash
-$ yarn start
+$ npm start
 ```
 # zeam
